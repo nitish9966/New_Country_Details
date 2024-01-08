@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    background: url("https://img.freepik.com/premium-vector/illustration-map-world-with-flags-all-countries_37674-7.jpg?w=1060");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: #333;
+}
+
+.search-container {
+    margin: 30px;
+}
+
+#country-input {
+    padding: 10px;
+    width: 300px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#country-details {
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    margin-left: 450px;
+}
+#logout-button {
+    display: block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    float: right;
+    text-decoration: none;
+}
+button a{
+    text-decoration: none;
+    color: azure;
+}
+
+
+
+
+

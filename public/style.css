@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(#9b59b6,#e74c3c); /* Set a dark background color */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    margin-top: 100px;
+    background: linear-gradient(130deg, #5bc0de,#0073e6); /* Use a semi-transparent white background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: slideIn 2s ease-in-out; /* Slide-in animation */
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+marquee{
+    width: 100px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    color:whitesmoke ;
+    background-color: black;
+}
+
+button {
+    background:linear-gradient(130deg, #aaff00 ,#00cc00); /* Use a nice blue color for the button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background:linear-gradient(130deg, #ff5733,#ff0000); /* Darker blue on hover */
+}
+
+p {
+    margin-top: 10px;
+    color: aqua;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 5px;
+    background-color: red;
+    border-radius: 7px;
+}
+
+a:hover {
+    text-decoration: none;
+    background-color: #00cc00;
+}
+
+/* Slideshow animation */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the background behind the content */
+    animation: slideshow 10s ease-in-out infinite; /* Slide the background infinitely */
+    background-image: url("https://via.placeholder.com/"); /* Replace with your slideshow images */
+    background-size: cover;
+    opacity: 0.5; /* Adjust the opacity of the background */
+}
+
+@keyframes slideshow {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+}
+/* Add hover styling to input elements */
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
+    transform: scale(1.05); /* Scale the input element on hover */
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition */
+
+    /* Add color and background styling on hover */
+    color: black; /* Text color on hover */
+    background-color: aqua; /* Background color on hover */
+    border-color: #80a0b4; /* Border color on hover */
+}
