@@ -1,6 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    background: radial-gradient(#9b59b6,#e74c3c); /* Set a dark background color */
+    background: url('/assets/reg.jpg'); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     margin: 0;
     padding: 0;
     overflow: hidden; /* Hide overflow to prevent scrollbars */
@@ -10,7 +13,6 @@ body {
     max-width: 400px;
     margin: 50px auto;
     margin-top: 100px;
-    background: linear-gradient(130deg, #5bc0de,#0073e6); /* Use a semi-transparent white background */
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -31,7 +33,7 @@ body {
 
 h2 {
     margin-bottom: 20px;
-    color: #333;
+    color: #fefcfc;
 }
 marquee{
     width: 100px;
@@ -54,7 +56,7 @@ input[type="password"] {
     border: 1px solid #ccc;
     border-radius: 3px;
     font-size: 16px;
-    color:whitesmoke ;
+    color:hsl(0, 0%, 100%) ;
     background-color: black;
 }
 

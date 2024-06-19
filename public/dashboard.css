@@ -2,9 +2,23 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f0f0f0;
-    background: url("https://img.freepik.com/premium-vector/illustration-map-world-with-flags-all-countries_37674-7.jpg?w=1060");
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 100%;
+    margin: 0;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    z-index: 10;
+    padding: 20px;
 }
 
 h1 {
@@ -13,6 +27,8 @@ h1 {
 
 .search-container {
     margin: 30px;
+    position: relative;
+    z-index: 10;
 }
 
 #country-input {
@@ -28,15 +44,15 @@ h1 {
     cursor: pointer;
 }
 
-#country-details {
-    margin: 20px;
+/* #country-details {
+    margin: 20px auto;
     padding: 20px;
     width: 300px;
     background-color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     display: none;
-    margin-left: 450px;
-}
+} */
+
 #logout-button {
     display: block;
     padding: 10px 20px;
@@ -44,15 +60,13 @@ h1 {
     color: #fff;
     border: none;
     cursor: pointer;
-    float: right;
     text-decoration: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
-button a{
+
+button a {
     text-decoration: none;
     color: azure;
 }
-
-
-
-
-
