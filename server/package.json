@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.19.2",
+    "firebase-admin": "^11.11.1",
+    "firebase-functions": "^4.4.1",
+    "mongodb": "^6.3.0",
+    "node": "^20.7.0",
+    "path": "^0.12.7"
+  },
+  "name": "country_details_app",
+  "version": "1.0.0",
+  "main": "firebaseserver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
