@@ -4,19 +4,19 @@ const port = 3000;
 const path = require("path");
 
 const admin = require("firebase-admin");
-const serviceAccount = require(path.join(__dirname, "./fullstack.json")); // Adjusted path
+const serviceAccount = require(path.join(__dirname, "./fullstack.json"));
 
-// Initialize Firebase Admin SDK
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
+  credential: admin.credential.cert(serviceAccount)
 });
+
 
 const db = admin.firestore();
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, "../public"))); // Adjusted path
+app.use(express.static(path.join(__dirname, "../public")));
 
 // Body parser middleware to parse JSON and URL-encoded data
 app.use(express.json());
@@ -39,7 +39,7 @@ app.post("/signup", async (req, res) => {
       res.send(`
         <script>
           alert('User with this email already exists');
-          window.location.href = '/signup.html'; // Adjusted path
+          window.location.href = '/signup.html'; // Redirect to signup page
         </script>
       `);
     } else {
@@ -50,7 +50,7 @@ app.post("/signup", async (req, res) => {
       };
 
       await db.collection("RegisteredDB").doc(Email).set(newUser);
-      res.redirect("/login.html"); // Adjusted path
+      res.redirect("/login.html"); // Redirect to login page
     }
   } catch (error) {
     console.error("Error registering user:", error);
@@ -60,7 +60,7 @@ app.post("/signup", async (req, res) => {
 
 // Route for login page
 app.get("/login", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/login.html")); // Adjusted path
+  res.sendFile(path.join(__dirname, "../public/login.html"));
 });
 
 // Route for login
@@ -74,12 +74,12 @@ app.post("/login", async (req, res) => {
       const passwordMatch = await bcrypt.compare(Password, userData.Password);
 
       if (passwordMatch) {
-        res.redirect("/dashboard.html"); // Adjusted path
+        res.redirect("/dashboard.html"); // Redirect to dashboard
       } else {
         res.send(`
           <script>
             alert('INVALID PASSWORD. Please Enter Correct Password');
-            window.location.href = '/login.html'; // Adjusted path
+            window.location.href = '/login.html'; // Redirect to login page
           </script>
         `);
       }
@@ -87,21 +87,22 @@ app.post("/login", async (req, res) => {
       res.send(`
         <script>
           alert('Login failed. User does not exist');
-          window.location.href = '/login.html'; // Adjusted path
+          window.location.href = '/login.html'; // Redirect to login page
         </script>
       `);
     }
   } catch (error) {
     console.error("Error logging in:", error);
-    res.redirect("/login.html?error=Login failed"); // Adjusted path
+    res.redirect("/login.html?error=Login failed"); // Redirect to login page with error query parameter
   }
 });
 
 // Route for dashboard
 app.get("/dashboard", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/dashboard.html")); // Adjusted path
+  res.sendFile(path.join(__dirname, "../public/dashboard.html"));
 });
 
+// Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
